@@ -1,47 +1,17 @@
 module.exports = {
   config: {
-    // default font size in pixels for all tabs
     fontSize: 12,
-
-    // font family with optional fallbacks
-    fontFamily: 'MesloLGS NF',
-
-    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
+    fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
     cursorColor: 'rgba(248,28,229,0.8)',
-
-    // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
-
-    // color of the text
     foregroundColor: '#fff',
-
-    // terminal background color
     backgroundColor: 'rgba(0, 0, 0)',
-    opacity: 0.5,
-    // border color (window, tabs)
     borderColor: '#333',
-
-    // custom css to embed in the main window
     css: '',
-
-    // custom css to embed in the terminal window
     termCSS: '',
-
-    // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
-    // default: `false` on Linux, `true` on Windows (ignored on macOS)
     showHamburgerMenu: '',
-
-    // set to `false` if you want to hide the minimize, maximize and close buttons
-    // additionally, set to `'left'` if you want them on the left, like in Ubuntu
-    // default: `true` on windows and Linux (ignored on macOS)
     showWindowControls: '',
-
-    // custom padding (css format, i.e.: `top right bottom left`)
     padding: '12px 14px',
-
-    // the full list. if you're going to provide the full color palette,
-    // including the 6 x 6 color cubes and the grayscale map, just provide
-    // an array here instead of a color map object
     colors: {
       black: '#000000',
       red: '#ff0000',
@@ -60,35 +30,15 @@ module.exports = {
       lightCyan: '#00ffff',
       lightWhite: '#ffffff',
     },
-
-    // for environment variables
     env: { TERM: 'cygwin' },
-
-    // set to false for no bell
     bell: 'SOUND',
-
-    // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false,
-
-    // if true, on right click selected text will be copied or pasted if no
-    // selection is present (true by default on Windows)
-    // quickEdit: true
-
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // for advanced config flags please refer to https://hyper.is/#cfg
+    /**
+     * Uncomment below lines for windows
+     */
+    //  shell: 'C:\\Users\\ritik\\AppData\\Local\\Microsoft\\WindowsApps\\debian.exe',
+    //  shellArgs: [],
   },
-
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
   plugins: ['hyperborder', 'hyper-tab-icons', "hyper-opacity", "hyperpower"],
-  // in development, you can create a directory under
-  // `~/.hyper_plugins/local/` and include it here
-  // to load it and avoid it being `npm install`ed
   localPlugins: [],
 };
